@@ -2,6 +2,19 @@
 
 macOS desktop app that shows how much of your Claude and Codex (ChatGPT plan) quota is left, for the rolling 5-hour session window and the weekly window. Lives in a resizable window and in the menubar.
 
+![Usage Monitor showing Claude and Codex session and weekly limits side by side](.github/screenshots/hero-light.png)
+
+<p align="center">
+  <img src=".github/screenshots/narrow-light.png" width="30%" alt="Narrow window, light theme, cards stacked" />
+  <img src=".github/screenshots/narrow-dark.png" width="30%" alt="Narrow window, dark theme" />
+  <img src=".github/screenshots/settings.png" width="30%" alt="Settings: language, appearance, layout, menubar" />
+</p>
+
+- Session and weekly windows per provider, with percent left, percent used, countdown and reset time.
+- Menubar title with the numbers you pick, full breakdown in the tray menu.
+- Layout follows the window size (stacked or two columns) or a fixed choice; light, dark or system theme; English and Vietnamese.
+- No accounts inside the app. It reuses what the Claude Code and Codex CLIs already have on your machine, see below.
+
 Design notes and the maintenance guide are kept outside the repository.
 
 ## How data is obtained

@@ -7,6 +7,7 @@ import { IPC } from '@shared/ipc-channels'
  * Development-only helpers, all no-ops in production builds.
  * `USAGE_MONITOR_SCREENSHOT=/path.png` captures the window a few seconds after load,
  * `USAGE_MONITOR_WINDOW_SIZE=WxH` forces an initial size for layout checks,
+ * `USAGE_MONITOR_SCREENSHOT_SCALE=2` renders at 2x for crisp README images,
  * `USAGE_MONITOR_OPEN_SETTINGS=1` opens the settings view once the renderer is ready.
  */
 export function attachDevTools(win: BrowserWindow): void {
@@ -19,10 +20,14 @@ export function attachDevTools(win: BrowserWindow): void {
     }
   })
 
+  const scale = Number(process.env.USAGE_MONITOR_SCREENSHOT_SCALE ?? 1)
   const size = process.env.USAGE_MONITOR_WINDOW_SIZE?.match(/^(\d+)x(\d+)$/)
   if (size) {
-    win.setSize(Number(size[1]), Number(size[2]))
+    win.setSize(Number(size[1]) * scale, Number(size[2]) * scale)
     console.log(`[dev] window size forced to ${win.getSize().join('x')}`)
+  }
+  if (scale !== 1) {
+    win.webContents.once('did-finish-load', () => win.webContents.setZoomFactor(scale))
   }
 
   if (process.env.USAGE_MONITOR_OPEN_SETTINGS) {

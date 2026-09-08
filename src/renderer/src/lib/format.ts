@@ -23,7 +23,8 @@ export function formatDuration(ms: number, t: TFunction): string {
 
 /** Localised "3 minutes ago" using the browser's Intl support. */
 export function formatRelativeTime(timestamp: number, now: number, locale: string): string {
-  const diffSec = Math.round((timestamp - now) / 1000)
+  // File mtimes can sit a few hundred ms ahead of the last tick; never say "in 1 second".
+  const diffSec = Math.min(0, Math.round((timestamp - now) / 1000))
   const rtf = new Intl.RelativeTimeFormat(locale, { numeric: 'auto' })
   const abs = Math.abs(diffSec)
   if (abs < 60) return rtf.format(diffSec, 'second')
