@@ -14,6 +14,7 @@ export interface ClaudeProviderOptions {
 }
 
 const STALE_CHECK_MS = 30_000
+const LIVE_MAX_AGE_MS = 60_000
 
 /**
  * Reads the JSON that the installed statusline script writes on every Claude
@@ -120,12 +121,16 @@ export class ClaudeProvider extends BaseProvider {
   private checkStale(): void {
     const state = this.getState()
     if (!state.snapshot) return
+    if (state.status !== 'ok' && state.status !== 'cached' && state.status !== 'stale') return
+
     const ageMs = Date.now() - state.snapshot.fetchedAt
     const isStale = ageMs > this.options.staleAfterMinutes * 60_000
-    if (isStale && state.status === 'ok') {
-      this.setStatus({ status: 'stale', errorKey: 'claude.stale' })
-    } else if (!isStale && state.status === 'stale') {
-      this.setStatus({ status: 'ok' })
-    }
+    const nextStatus = isStale ? 'stale' : ageMs > LIVE_MAX_AGE_MS ? 'cached' : 'ok'
+    if (state.status === nextStatus) return
+
+    this.setStatus({
+      status: nextStatus,
+      errorKey: nextStatus === 'stale' ? 'claude.stale' : undefined
+    })
   }
 }

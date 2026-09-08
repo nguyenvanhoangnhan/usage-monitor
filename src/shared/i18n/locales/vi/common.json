@@ -16,6 +16,7 @@
   "status": {
     "idle": "Đang chờ",
     "ok": "Hoạt động",
+    "cached": "Bản lưu",
     "stale": "Cũ",
     "not_configured": "Chưa cài",
     "auth_expired": "Cần đăng nhập lại",

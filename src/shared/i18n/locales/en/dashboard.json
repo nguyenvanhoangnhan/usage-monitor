@@ -17,6 +17,9 @@
   "stale": {
     "claude": "Claude Code has not reported for a while. Numbers update again when you use Claude Code."
   },
+  "cached": {
+    "claude": "Cached from Claude Code. Numbers update after the next Claude Code activity."
+  },
   "waiting": {
     "claude": "Waiting for Claude Code to report rate limits. Send one prompt in any Claude Code session."
   },

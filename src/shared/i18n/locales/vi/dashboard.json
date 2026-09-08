@@ -17,6 +17,9 @@
   "stale": {
     "claude": "Claude Code đã lâu không báo số liệu. Số sẽ cập nhật lại khi bạn dùng Claude Code."
   },
+  "cached": {
+    "claude": "Dữ liệu lưu từ Claude Code. Số sẽ cập nhật sau hoạt động Claude Code tiếp theo."
+  },
   "waiting": {
     "claude": "Đang chờ Claude Code báo rate limit. Gửi một prompt trong bất kỳ phiên Claude Code nào."
   },

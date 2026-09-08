@@ -92,6 +92,7 @@ export function ProviderCard({
 const STATUS_DOT: Record<ProviderStatus, string> = {
   idle: 'bg-muted-foreground/40',
   ok: 'bg-ok',
+  cached: 'bg-warn',
   stale: 'bg-warn',
   not_configured: 'bg-muted-foreground/40',
   auth_expired: 'bg-critical',
@@ -218,13 +219,14 @@ function ResetText({
   )
 }
 
-/** Short note when the numbers need context (stale, waiting, error). */
+/** Short note when the numbers need context (cached, stale, waiting, error). */
 function Hint({ state }: { state: ProviderState }): React.JSX.Element | null {
   const { t } = useTranslation()
   const { provider, status, snapshot, errorKey } = state
   let text: string | null = null
   let tone: 'muted' | 'error' = 'muted'
-  if (status === 'stale' && provider === 'claude') text = t('dashboard:stale.claude')
+  if (status === 'cached' && provider === 'claude') text = t('dashboard:cached.claude')
+  else if (status === 'stale' && provider === 'claude') text = t('dashboard:stale.claude')
   else if (status === 'idle' && provider === 'claude' && !snapshot)
     text = t('dashboard:waiting.claude')
   else if (errorKey && status !== 'stale' && status !== 'idle') {

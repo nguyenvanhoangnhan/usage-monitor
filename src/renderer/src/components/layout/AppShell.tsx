@@ -78,6 +78,7 @@ export function AppShell({ view, onChangeView, children }: AppShellProps): React
 const DOT_TONE: Record<ProviderStatus, string> = {
   idle: 'bg-muted-foreground/40',
   ok: 'bg-ok',
+  cached: 'bg-warn',
   stale: 'bg-warn',
   not_configured: 'bg-muted-foreground/40',
   auth_expired: 'bg-critical',

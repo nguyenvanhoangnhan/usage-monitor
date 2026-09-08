@@ -16,6 +16,7 @@
   "status": {
     "idle": "Waiting",
     "ok": "Live",
+    "cached": "Cached",
     "stale": "Stale",
     "not_configured": "Not set up",
     "auth_expired": "Sign in needed",

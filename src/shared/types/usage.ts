@@ -32,7 +32,7 @@ export interface UsageSnapshot {
 }
 
 export type ProviderStatus =
-  'idle' | 'ok' | 'stale' | 'not_configured' | 'auth_expired' | 'rate_limited' | 'error'
+  'idle' | 'ok' | 'cached' | 'stale' | 'not_configured' | 'auth_expired' | 'rate_limited' | 'error'
 
 export interface ProviderState {
   provider: ProviderId
