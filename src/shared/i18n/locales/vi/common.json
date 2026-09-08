@@ -1,0 +1,62 @@
+{
+  "appName": "Usage Monitor",
+  "provider": {
+    "claude": "Claude",
+    "codex": "Codex"
+  },
+  "window": {
+    "session": "Phiên",
+    "sessionHint": "Reset mỗi 5 giờ",
+    "weekly": "Tuần",
+    "weeklyHint": "Reset mỗi 7 ngày",
+    "extra": "Giới hạn khác",
+    "sessionTitle": "Phiên hiện tại",
+    "weeklyTitle": "Giới hạn tuần"
+  },
+  "status": {
+    "idle": "Đang chờ",
+    "ok": "Hoạt động",
+    "stale": "Cũ",
+    "not_configured": "Chưa cài",
+    "auth_expired": "Cần đăng nhập lại",
+    "rate_limited": "Bị giới hạn tần suất",
+    "error": "Lỗi"
+  },
+  "percentUsed": "Đã dùng {{value}}%",
+  "percentLeft": "Còn {{value}}%",
+  "resetsIn": "Reset sau {{duration}}",
+  "resetsAt": "Reset lúc {{time}}",
+  "resetDone": "Đã reset",
+  "updatedAgo": "Cập nhật {{ago}}",
+  "never": "chưa bao giờ",
+  "duration": {
+    "days": "{{count}} ngày",
+    "hours": "{{count}} giờ",
+    "minutes": "{{count}} phút",
+    "seconds": "{{count}} giây",
+    "now": "bây giờ"
+  },
+  "action": {
+    "refresh": "Làm mới",
+    "refreshAll": "Làm mới tất cả",
+    "settings": "Cài đặt",
+    "back": "Quay lại",
+    "pin": "Luôn nổi trên cùng",
+    "unpin": "Bỏ ghim",
+    "copy": "Sao chép",
+    "copied": "Đã sao chép",
+    "install": "Cài đặt",
+    "cancel": "Huỷ",
+    "confirm": "Xác nhận",
+    "openFolder": "Mở trong Finder",
+    "close": "Đóng",
+    "layoutStack": "Xếp dọc",
+    "layoutGrid": "Xem dạng lưới"
+  },
+  "plan": "Gói: {{plan}}",
+  "unknownPlan": "không rõ",
+  "leftLabel": "còn lại",
+  "usedLabel": "đã dùng",
+  "resetsInAt": "Reset sau {{duration}} · {{time}}",
+  "updated": "Cập nhật {{ago}}"
+}

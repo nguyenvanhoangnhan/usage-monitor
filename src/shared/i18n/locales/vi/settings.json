@@ -1,0 +1,93 @@
+{
+  "title": "Cài đặt",
+  "tabs": {
+    "general": "Chung",
+    "claude": "Claude",
+    "codex": "Codex"
+  },
+  "general": {
+    "language": "Ngôn ngữ",
+    "languageHint": "Áp dụng cho cửa sổ và menu trên menubar.",
+    "theme": "Giao diện",
+    "themeOptions": {
+      "system": "Theo hệ thống",
+      "light": "Sáng",
+      "dark": "Tối"
+    },
+    "alwaysOnTop": "Luôn nổi trên cùng",
+    "alwaysOnTopHint": "Hữu ích khi đặt cửa sổ cạnh editor.",
+    "tray": "Menubar",
+    "trayEnabled": "Hiện % trên menubar",
+    "trayItems": "Menubar hiển thị",
+    "trayItemLabel": "{{provider}} {{window}}",
+    "displayMode": "Số lớn hiển thị",
+    "displayModeHint": "Thanh và menubar dùng cùng lựa chọn này.",
+    "displayModeOptions": {
+      "remaining": "Phần còn lại",
+      "used": "Phần đã dùng"
+    },
+    "trayHidden": "Ẩn",
+    "layout": "Bố cục thẻ",
+    "layoutHint": "Tự động sẽ chia 2 cột khi cửa sổ đủ rộng.",
+    "layoutOptions": {
+      "auto": "Tự động",
+      "stack": "Xếp dọc",
+      "grid": "Lưới"
+    }
+  },
+  "claude": {
+    "title": "Statusline hook của Claude Code",
+    "intro": "Claude Code truyền dữ liệu rate limit cho lệnh statusline. App cài một script nhỏ làm lệnh đó; script lưu dữ liệu ra file trên máy và app đọc file này. Không đụng tới token hay cookie.",
+    "status": {
+      "installed": "Đã cài hook",
+      "notInstalled": "Chưa cài hook",
+      "existingCommand": "Đã có một lệnh statusline khác. Lệnh đó vẫn chạy sau lệnh của app.",
+      "dataFile": "File dữ liệu",
+      "dataFileMissing": "Chưa có dữ liệu. Sau khi cài, gửi một prompt trong Claude Code.",
+      "dataFileUpdated": "File dữ liệu cập nhật {{ago}}"
+    },
+    "paths": {
+      "settings": "Settings của Claude",
+      "script": "Script hook",
+      "data": "File dữ liệu"
+    },
+    "install": {
+      "button": "Cài hook",
+      "reinstall": "Cài lại hook",
+      "confirmTitle": "Sửa settings của Claude Code?",
+      "confirmBody": "App sẽ ghi {{script}} và đặt statusLine.command trong {{settings}}. File settings được backup trước.",
+      "success": "Đã cài hook. Backup lưu tại {{backup}}.",
+      "successNoBackup": "Đã cài hook."
+    },
+    "manual": {
+      "title": "Cài thủ công",
+      "body": "Nếu muốn tự sửa, thêm đoạn sau vào {{settings}}:"
+    },
+    "staleAfter": "Đánh dấu cũ sau",
+    "staleAfterUnit": "{{count}} phút",
+    "staleAfterUnit_other": "{{count}} phút",
+    "enabled": "Hiện Claude"
+  },
+  "codex": {
+    "title": "Codex (gói ChatGPT)",
+    "intro": "App đọc access token mà Codex CLI lưu trong auth.json và hỏi endpoint usage của Codex về giới hạn của bạn. App không refresh hay ghi token.",
+    "status": {
+      "found": "Đã tìm thấy thông tin đăng nhập",
+      "missing": "Không thấy auth.json. Chạy Codex CLI và đăng nhập.",
+      "noToken": "auth.json không có access token. Đăng nhập bằng `codex login`.",
+      "noAccount": "Không xác định được account id của ChatGPT.",
+      "lastRefresh": "CLI refresh token lúc: {{time}}"
+    },
+    "paths": {
+      "auth": "File thông tin đăng nhập"
+    },
+    "pollInterval": "Kiểm tra mỗi",
+    "pollIntervalUnit": "{{count}} giây",
+    "pollIntervalUnit_other": "{{count}} giây",
+    "enabled": "Hiện Codex",
+    "refresh": "Lấy ngay"
+  },
+  "about": {
+    "version": "Phiên bản {{version}}"
+  }
+}

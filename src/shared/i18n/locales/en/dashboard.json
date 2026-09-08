@@ -1,0 +1,26 @@
+{
+  "title": "Usage",
+  "lastUpdate": "Last update",
+  "noData": "No data yet",
+  "empty": {
+    "claude": {
+      "title": "Connect Claude Code",
+      "body": "Install the statusline hook so Claude Code can share its rate limit data with this app.",
+      "action": "Set up"
+    },
+    "codex": {
+      "title": "Sign in to Codex",
+      "body": "Run the Codex CLI once and sign in with your ChatGPT account. This app reads the local session it creates.",
+      "action": "Check status"
+    }
+  },
+  "stale": {
+    "claude": "Claude Code has not reported for a while. Numbers update again when you use Claude Code."
+  },
+  "waiting": {
+    "claude": "Waiting for Claude Code to report rate limits. Send one prompt in any Claude Code session."
+  },
+  "extraToggle": "{{count}} other limit",
+  "extraToggle_other": "{{count}} other limits",
+  "disabled": "Disabled in settings"
+}

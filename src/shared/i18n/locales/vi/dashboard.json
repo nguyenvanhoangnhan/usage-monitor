@@ -1,0 +1,26 @@
+{
+  "title": "Mức sử dụng",
+  "lastUpdate": "Cập nhật gần nhất",
+  "noData": "Chưa có dữ liệu",
+  "empty": {
+    "claude": {
+      "title": "Kết nối Claude Code",
+      "body": "Cài statusline hook để Claude Code chia sẻ dữ liệu rate limit cho app này.",
+      "action": "Cài đặt"
+    },
+    "codex": {
+      "title": "Đăng nhập Codex",
+      "body": "Chạy Codex CLI một lần và đăng nhập bằng tài khoản ChatGPT. App đọc phiên đăng nhập lưu trên máy.",
+      "action": "Kiểm tra"
+    }
+  },
+  "stale": {
+    "claude": "Claude Code đã lâu không báo số liệu. Số sẽ cập nhật lại khi bạn dùng Claude Code."
+  },
+  "waiting": {
+    "claude": "Đang chờ Claude Code báo rate limit. Gửi một prompt trong bất kỳ phiên Claude Code nào."
+  },
+  "extraToggle": "{{count}} giới hạn khác",
+  "extraToggle_other": "{{count}} giới hạn khác",
+  "disabled": "Đã tắt trong cài đặt"
+}

@@ -1,0 +1,93 @@
+{
+  "title": "Settings",
+  "tabs": {
+    "general": "General",
+    "claude": "Claude",
+    "codex": "Codex"
+  },
+  "general": {
+    "language": "Language",
+    "languageHint": "Applies to the window and the menubar menu.",
+    "theme": "Appearance",
+    "themeOptions": {
+      "system": "System",
+      "light": "Light",
+      "dark": "Dark"
+    },
+    "alwaysOnTop": "Keep window on top",
+    "alwaysOnTopHint": "Useful when the window sits next to your editor.",
+    "tray": "Menubar",
+    "trayEnabled": "Show percentages in the menubar",
+    "trayItems": "Menubar shows",
+    "trayItemLabel": "{{provider}} {{window}}",
+    "displayMode": "Big numbers show",
+    "displayModeHint": "Bars and the menubar follow the same choice.",
+    "displayModeOptions": {
+      "remaining": "What is left",
+      "used": "What was used"
+    },
+    "trayHidden": "Hidden",
+    "layout": "Card layout",
+    "layoutHint": "Auto shows two columns once the window is wide enough.",
+    "layoutOptions": {
+      "auto": "Auto",
+      "stack": "Stacked",
+      "grid": "Grid"
+    }
+  },
+  "claude": {
+    "title": "Claude Code statusline hook",
+    "intro": "Claude Code passes rate limit data to its statusline command. This app installs a small script as that command; the script saves the data to a local file and this app reads it. No token or cookie is touched.",
+    "status": {
+      "installed": "Hook installed",
+      "notInstalled": "Hook not installed",
+      "existingCommand": "An existing statusline command was found. It will keep running after ours.",
+      "dataFile": "Data file",
+      "dataFileMissing": "No data yet. Send one prompt in Claude Code after installing.",
+      "dataFileUpdated": "Data file updated {{ago}}"
+    },
+    "paths": {
+      "settings": "Claude settings",
+      "script": "Hook script",
+      "data": "Data file"
+    },
+    "install": {
+      "button": "Install hook",
+      "reinstall": "Reinstall hook",
+      "confirmTitle": "Edit Claude Code settings?",
+      "confirmBody": "This writes {{script}} and sets statusLine.command in {{settings}}. A backup of the settings file is created first.",
+      "success": "Hook installed. Backup saved to {{backup}}.",
+      "successNoBackup": "Hook installed."
+    },
+    "manual": {
+      "title": "Manual setup",
+      "body": "Add this to {{settings}} if you prefer to edit it yourself:"
+    },
+    "staleAfter": "Mark as stale after",
+    "staleAfterUnit": "{{count}} minute",
+    "staleAfterUnit_other": "{{count}} minutes",
+    "enabled": "Show Claude"
+  },
+  "codex": {
+    "title": "Codex (ChatGPT plan)",
+    "intro": "This app reads the access token the Codex CLI keeps in auth.json and asks the Codex usage endpoint for your limits. It never refreshes or writes the token.",
+    "status": {
+      "found": "Credentials found",
+      "missing": "auth.json not found. Run the Codex CLI and sign in.",
+      "noToken": "auth.json has no access token. Sign in with `codex login`.",
+      "noAccount": "Could not determine the ChatGPT account id.",
+      "lastRefresh": "Token refreshed by CLI: {{time}}"
+    },
+    "paths": {
+      "auth": "Credential file"
+    },
+    "pollInterval": "Check every",
+    "pollIntervalUnit": "{{count}} second",
+    "pollIntervalUnit_other": "{{count}} seconds",
+    "enabled": "Show Codex",
+    "refresh": "Fetch now"
+  },
+  "about": {
+    "version": "Version {{version}}"
+  }
+}

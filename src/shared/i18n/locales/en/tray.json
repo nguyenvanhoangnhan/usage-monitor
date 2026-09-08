@@ -1,0 +1,17 @@
+{
+  "tooltip": "Usage Monitor",
+  "shortProvider": {
+    "claude": "C",
+    "codex": "X"
+  },
+  "noData": "--",
+  "line": "{{provider}}: {{session}}% session, {{weekly}}% weekly",
+  "lineMissing": "{{provider}}: no data",
+  "lineStatus": "{{provider}}: {{status}}",
+  "resets": "resets in {{duration}}",
+  "open": "Open Usage Monitor",
+  "refresh": "Refresh now",
+  "alwaysOnTop": "Keep window on top",
+  "settings": "Settings",
+  "quit": "Quit"
+}

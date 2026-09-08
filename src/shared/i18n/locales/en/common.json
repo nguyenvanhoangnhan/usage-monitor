@@ -1,0 +1,62 @@
+{
+  "appName": "Usage Monitor",
+  "provider": {
+    "claude": "Claude",
+    "codex": "Codex"
+  },
+  "window": {
+    "session": "Session",
+    "sessionHint": "Resets every 5 hours",
+    "weekly": "Weekly",
+    "weeklyHint": "Resets every 7 days",
+    "extra": "Other limits",
+    "sessionTitle": "Current session",
+    "weeklyTitle": "Weekly limit"
+  },
+  "status": {
+    "idle": "Waiting",
+    "ok": "Live",
+    "stale": "Stale",
+    "not_configured": "Not set up",
+    "auth_expired": "Sign in needed",
+    "rate_limited": "Rate limited",
+    "error": "Error"
+  },
+  "percentUsed": "{{value}}% used",
+  "percentLeft": "{{value}}% left",
+  "resetsIn": "Resets in {{duration}}",
+  "resetsAt": "Resets at {{time}}",
+  "resetDone": "Reset",
+  "updatedAgo": "Updated {{ago}}",
+  "never": "never",
+  "duration": {
+    "days": "{{count}}d",
+    "hours": "{{count}}h",
+    "minutes": "{{count}}m",
+    "seconds": "{{count}}s",
+    "now": "now"
+  },
+  "action": {
+    "refresh": "Refresh",
+    "refreshAll": "Refresh all",
+    "settings": "Settings",
+    "back": "Back",
+    "pin": "Keep on top",
+    "unpin": "Unpin",
+    "copy": "Copy",
+    "copied": "Copied",
+    "install": "Install",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "openFolder": "Show in Finder",
+    "close": "Close",
+    "layoutStack": "Stack cards",
+    "layoutGrid": "Show as grid"
+  },
+  "plan": "Plan: {{plan}}",
+  "unknownPlan": "unknown",
+  "leftLabel": "left",
+  "usedLabel": "used",
+  "resetsInAt": "Resets in {{duration}} · {{time}}",
+  "updated": "Updated {{ago}}"
+}

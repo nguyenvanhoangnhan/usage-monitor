@@ -1,0 +1,23 @@
+{
+  "generic": "Có lỗi xảy ra. Đang hiện số liệu gần nhất.",
+  "network": "Không kết nối được máy chủ. Kiểm tra mạng.",
+  "timeout": "Yêu cầu quá thời gian chờ.",
+  "invalidResponse": "Máy chủ trả dữ liệu không đúng định dạng.",
+  "claude": {
+    "notConfigured": "Chưa cài statusline hook.",
+    "waitingForData": "Đang chờ Claude Code báo số liệu.",
+    "stale": "Claude Code đã lâu không báo số liệu.",
+    "invalidFile": "Không đọc được file dữ liệu.",
+    "settingsUnreadable": "Không đọc được settings của Claude Code.",
+    "settingsInvalidJson": "Settings của Claude Code không phải JSON hợp lệ.",
+    "writeFailed": "Không ghi được file hook."
+  },
+  "codex": {
+    "authMissing": "Không thấy thông tin đăng nhập Codex. Đăng nhập bằng Codex CLI.",
+    "authInvalid": "Không đọc được file thông tin đăng nhập Codex.",
+    "authExpired": "Phiên Codex đã hết hạn. Chạy `codex` một lần để đăng nhập lại.",
+    "accountMissing": "Không xác định được account id ChatGPT từ thông tin đăng nhập.",
+    "rateLimited": "Gọi quá nhiều lần. Sẽ thử lại sau.",
+    "forbidden": "Máy chủ từ chối truy cập."
+  }
+}

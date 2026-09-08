@@ -1,0 +1,159 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import '@fontsource/be-vietnam-pro/400.css';
+@import '@fontsource/be-vietnam-pro/500.css';
+@import '@fontsource/be-vietnam-pro/600.css';
+@import '@fontsource-variable/newsreader/opsz.css';
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design tokens. Warm off-white ground, near-black ink, one terracotta accent.
+ * shadcn variable names are mapped below so generated components inherit the palette.
+ */
+:root {
+  --background: #faf9f5;
+  --surface: #f4f3ee;
+  --foreground: #141413;
+  --card: #ffffff;
+  --card-foreground: #141413;
+  --popover: #ffffff;
+  --popover-foreground: #141413;
+  --primary: #d97757;
+  --primary-strong: #c2643f;
+  --primary-foreground: #ffffff;
+  --secondary: #f4f3ee;
+  --secondary-foreground: #141413;
+  --muted: #efede6;
+  --muted-foreground: #5e5d59;
+  --accent: #f4f3ee;
+  --accent-foreground: #141413;
+  --destructive: #b8412d;
+  --destructive-foreground: #ffffff;
+  --border: #e5e3da;
+  --input: #e5e3da;
+  --ring: #d97757;
+  --track: #eceae2;
+  --warn: #c9973b;
+  --critical: #b8412d;
+  --ok: #5e8c61;
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: #1b1a18;
+  --surface: #22201d;
+  --foreground: #f0eee6;
+  --card: #2a2825;
+  --card-foreground: #f0eee6;
+  --popover: #2a2825;
+  --popover-foreground: #f0eee6;
+  --primary: #e08a6b;
+  --primary-strong: #c2643f;
+  --primary-foreground: #1b1a18;
+  --secondary: #33312d;
+  --secondary-foreground: #f0eee6;
+  --muted: #33312d;
+  --muted-foreground: #a8a69e;
+  --accent: #33312d;
+  --accent-foreground: #f0eee6;
+  --destructive: #d25a45;
+  --destructive-foreground: #1b1a18;
+  --border: #3a3834;
+  --input: #3a3834;
+  --ring: #e08a6b;
+  --track: #33312d;
+  --warn: #d9ab55;
+  --critical: #d25a45;
+  --ok: #7ea881;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-strong: var(--primary-strong);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-track: var(--track);
+  --color-warn: var(--warn);
+  --color-critical: var(--critical);
+  --color-ok: var(--ok);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --font-sans: 'Be Vietnam Pro', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Newsreader Variable', Georgia, 'Times New Roman', serif;
+
+  --shadow-card: 0 1px 2px rgb(20 20 19 / 0.04);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-size: 13px;
+    line-height: 1.45;
+    overflow: hidden;
+    user-select: none;
+  }
+
+  .font-serif {
+    font-optical-sizing: auto;
+    font-feature-settings: 'kern', 'liga';
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--primary) 30%, transparent);
+  }
+}
+
+/* Draggable custom titlebar regions for the frameless window. */
+.app-drag {
+  -webkit-app-region: drag;
+}
+
+.app-no-drag {
+  -webkit-app-region: no-drag;
+}
+
+/* Tabular figures for percentages and countdowns so digits do not jitter. */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Small uppercase label used for stat and section eyebrows. */
+.eyebrow {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}

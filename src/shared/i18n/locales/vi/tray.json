@@ -1,0 +1,17 @@
+{
+  "tooltip": "Usage Monitor",
+  "shortProvider": {
+    "claude": "C",
+    "codex": "X"
+  },
+  "noData": "--",
+  "line": "{{provider}}: phiên {{session}}%, tuần {{weekly}}%",
+  "lineMissing": "{{provider}}: chưa có dữ liệu",
+  "lineStatus": "{{provider}}: {{status}}",
+  "resets": "reset sau {{duration}}",
+  "open": "Mở Usage Monitor",
+  "refresh": "Làm mới",
+  "alwaysOnTop": "Luôn nổi trên cùng",
+  "settings": "Cài đặt",
+  "quit": "Thoát"
+}

@@ -1,0 +1,23 @@
+{
+  "generic": "Something went wrong. The last known values are shown.",
+  "network": "Could not reach the server. Check your connection.",
+  "timeout": "The request timed out.",
+  "invalidResponse": "The server returned data in an unexpected format.",
+  "claude": {
+    "notConfigured": "The statusline hook is not installed.",
+    "waitingForData": "Waiting for Claude Code to report.",
+    "stale": "Claude Code has not reported recently.",
+    "invalidFile": "The data file could not be read.",
+    "settingsUnreadable": "Could not read Claude Code settings.",
+    "settingsInvalidJson": "Claude Code settings are not valid JSON.",
+    "writeFailed": "Could not write the hook files."
+  },
+  "codex": {
+    "authMissing": "No Codex credentials found. Sign in with the Codex CLI.",
+    "authInvalid": "The Codex credential file could not be read.",
+    "authExpired": "The Codex session expired. Run `codex` once to sign in again.",
+    "accountMissing": "Could not determine the ChatGPT account id from the credentials.",
+    "rateLimited": "Too many requests. Trying again later.",
+    "forbidden": "Access denied by the server."
+  }
+}

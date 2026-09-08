@@ -1,0 +1,12 @@
+node_modules
+dist
+out
+.DS_Store
+.eslintcache
+*.log*
+
+# ClaudeKit Engineer skills, agents and rules are proprietary (see the kit's LICENSE); keep them local only.
+.claude/
+
+# Internal design and maintenance notes stay local.
+docs/
