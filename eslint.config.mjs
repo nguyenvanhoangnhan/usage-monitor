@@ -1,9 +1,14 @@
+import { createRequire } from 'node:module'
 import { defineConfig } from 'eslint/config'
 import tseslint from '@electron-toolkit/eslint-config-ts'
 import eslintConfigPrettier from '@electron-toolkit/eslint-config-prettier'
 import eslintPluginReact from 'eslint-plugin-react'
 import eslintPluginReactHooks from 'eslint-plugin-react-hooks'
 import eslintPluginReactRefresh from 'eslint-plugin-react-refresh'
+
+// eslint-plugin-react's 'detect' calls context.getFilename(), which ESLint 10 removed,
+// so read the installed React version here instead.
+const reactVersion = createRequire(import.meta.url)('react/package.json').version
 
 export default defineConfig(
   { ignores: ['**/node_modules', '**/dist', '**/out', '.claude/**'] },
@@ -13,7 +18,7 @@ export default defineConfig(
   {
     settings: {
       react: {
-        version: 'detect'
+        version: reactVersion
       }
     }
   },
